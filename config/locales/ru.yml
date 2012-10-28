@@ -1,0 +1,7 @@
+ru:
+  label_avatar: "Фотография"
+  message_avatar_uploaded: "Фотография загружена на сервер"
+  button_change_avatar:  "Изменить фотографию"
+  are_you_sure_delete_avatar: "Вы действительно хотите удалить свою фотографию?"
+  avatar_deleted:  "Фотография удалена"
+  unable_to_delete_avatar:  "При удалении фотографии произошла ошибка"

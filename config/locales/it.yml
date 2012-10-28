@@ -1,0 +1,8 @@
+# Italian strings go here
+it:
+  label_avatar: Immagine
+  message_avatar_uploaded: Immagine salvata
+  button_change_avatar:  Cambia la tua immagine
+  are_you_sure_delete_avatar: "Sicuro di volere eliminare l'immagine?"
+  avatar_deleted:  Immagine eliminata
+  unable_to_delete_avatar:  "Mi dispiace.  C'è stato un error eliminando l'immagine"

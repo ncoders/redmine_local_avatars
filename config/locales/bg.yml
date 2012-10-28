@@ -1,0 +1,9 @@
+# Bulgarian translation by Ivan Cenov
+# https://bugs.launchpad.net/redminelocalavatars/+bug/887451
+bg:
+  label_avatar: "Аватар"
+  message_avatar_uploaded: "Аватарът е зареден успешно"
+  button_change_avatar:  "Промяна на локален аватар"
+  are_you_sure_delete_avatar: "Сигурен ли сте, че искате да изтриете Вашия аватар?"
+  avatar_deleted:  "Аватарът е изтрит"
+  unable_to_delete_avatar:  "Грешка при опит за изтриване на аватара"

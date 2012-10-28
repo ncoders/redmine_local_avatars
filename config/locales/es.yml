@@ -1,0 +1,10 @@
+# Spanish strings go here
+# Courtesy of Anibal Avelar
+# https://bugs.launchpad.net/redminelocalavatars/+bug/716663
+es:
+  label_avatar: "Avatar"
+  message_avatar_uploaded: "Avatar descargado exitosamente"
+  button_change_avatar:  "Cambiar avatar"
+  are_you_sure_delete_avatar: "¿Estas seguro que quieres borrar tu avatar?"
+  avatar_deleted:  "Avatar borrado"
+  unable_to_delete_avatar:  "Lo sentimos. Hubo un error borrando el avatar"

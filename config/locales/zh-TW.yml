@@ -1,0 +1,8 @@
+# Simplified Chinese strings go here
+zh-TW:
+  label_avatar: "頭像"
+  message_avatar_uploaded: "成功上傳頭像"
+  button_change_avatar:  "更改頭像"
+  are_you_sure_delete_avatar: "確定刪除頭像嗎？"
+  avatar_deleted:  "頭像已刪除"
+  unable_to_delete_avatar:  "對不起，刪除頭像發生錯誤"
