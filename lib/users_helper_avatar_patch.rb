@@ -28,7 +28,7 @@ module LocalAvatarsPlugin
 
 		def user_settings_tabs_with_avatar
 			tabs = user_settings_tabs_without_avatar
-			tabs << {:name => 'avatar', :partial => 'users/avatar', :label => :label_avatar}
+			tabs << {:name => 'avatar', :partial => 'my/avatar', :label => :label_avatar}
 		end
   end
 end
