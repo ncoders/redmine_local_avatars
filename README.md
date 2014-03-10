@@ -24,7 +24,7 @@ And restart your application server.
 
 This current version on github is compatible with Redmine 2.1. 
 
-It has been imported fom lp:redminelocalavatars
+It has been imported from lp:redminelocalavatars
 incorporating the patch for 2.1 from chrisy at [https://bugs.launchpad.net/redminelocalavatars/+bug/1069808/comments/4](https://bugs.launchpad.net/redminelocalavatars/+bug/1069808/comments/4)
 
 ### Old version on launchpad
