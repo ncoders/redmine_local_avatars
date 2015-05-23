@@ -1,0 +1,8 @@
+# Japanese strings go here
+ja:
+  label_avatar: "アバター"
+  message_avatar_uploaded: "アバターのアップロードに成功しました。"
+  button_change_avatar:  "アバターの変更"
+  are_you_sure_delete_avatar: "アバターを削除してもよろしいですか？"
+  avatar_deleted:  "アバターは削除されました。"
+  unable_to_delete_avatar:  "アバターの削除中にエラーが発生しました。"
