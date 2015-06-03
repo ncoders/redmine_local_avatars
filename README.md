@@ -10,7 +10,7 @@ can also manage users' avatars through the /users section.
 
 Place this plugin into the folder `plugins/` of your redmine installation. Make sure that the folder is called "redmine_local_avatars".
 
-Udpate the gems, run any migrations:
+Update the gems, run any migrations:
 
 <pre>
 bundle install --without development test
@@ -38,6 +38,7 @@ At the moment the plugin doesn't work when running in development mode.
 * A.Chaika wrote the original version:
 * http://www.redmine.org/boards/3/topics/5365
 * https://github.com/Ubik/redmine_local_avatars
+* https://github.com/ncoders/redmine_local_avatars
 
 Luca Pireddu <pireddu@gmail.com> at CRS4 (http://www.crs4.it), 
 contributed updates and improvements.
@@ -61,7 +62,7 @@ patched to provide mechanisms to add/delete avatars.
 
 ## License
 
-Copyright (C) 2010  Andrew Chaika, Luca Pireddu
+Copyright (C) 2010-2015  Andrew Chaika, Luca Pireddu, dup2
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
