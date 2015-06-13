@@ -1,8 +1,8 @@
 # Japanese strings go here
 ja:
-  label_avatar: "ƒAƒoƒ^["
-  message_avatar_uploaded: "ƒAƒoƒ^[‚ÌƒAƒbƒvƒ[ƒh‚É¬Œ÷‚µ‚Ü‚µ‚½B"
-  button_change_avatar:  "ƒAƒoƒ^[‚Ì•ÏX"
-  are_you_sure_delete_avatar: "ƒAƒoƒ^[‚ğíœ‚µ‚Ä‚à‚æ‚ë‚µ‚¢‚Å‚·‚©H"
-  avatar_deleted:  "ƒAƒoƒ^[‚Ííœ‚³‚ê‚Ü‚µ‚½B"
-  unable_to_delete_avatar:  "ƒAƒoƒ^[‚Ìíœ’†‚ÉƒGƒ‰[‚ª”­¶‚µ‚Ü‚µ‚½B"
+  label_avatar: "ã‚¢ãƒã‚¿ãƒ¼"
+  message_avatar_uploaded: "ã‚¢ãƒã‚¿ãƒ¼ã®ã‚¢ãƒƒãƒ—ãƒ­ãƒ¼ãƒ‰ã«æˆåŠŸã—ã¾ã—ãŸã€‚"
+  button_change_avatar:  "ã‚¢ãƒã‚¿ãƒ¼ã®å¤‰æ›´"
+  are_you_sure_delete_avatar: "ã‚¢ãƒã‚¿ãƒ¼ã‚’å‰Šé™¤ã—ã¦ã‚‚ã‚ˆã‚ã—ã„ã§ã™ã‹ï¼Ÿ"
+  avatar_deleted:  "ã‚¢ãƒã‚¿ãƒ¼ã¯å‰Šé™¤ã•ã‚Œã¾ã—ãŸã€‚"
+  unable_to_delete_avatar:  "ã‚¢ãƒã‚¿ãƒ¼ã®å‰Šé™¤ä¸­ã«ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸã€‚"
