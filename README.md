@@ -62,7 +62,8 @@ patched to provide mechanisms to add/delete avatars.
 
 ## License
 
-Copyright (C) 2010-2015  Andrew Chaika, Luca Pireddu, dup2
+Copyright (C) 2010 Andrew Chaika, Luca Pireddu  
+Copyright (C) 2015 dup2
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
