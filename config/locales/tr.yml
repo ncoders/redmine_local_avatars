@@ -1,0 +1,8 @@
+# Turkish strings go here
+tr:
+  label_avatar: "Avatar"
+  message_avatar_uploaded: "Avatar yüklendi"
+  button_change_avatar:  "Avatarımı değiştir"
+  are_you_sure_delete_avatar: "Avatarınızı silmek istediğinize emin misiniz?"
+  avatar_deleted:  "Avatar silindi"
+  unable_to_delete_avatar:  "Üzgünüm. Avatar silinirken bir hata oldu"
