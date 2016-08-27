@@ -29,7 +29,7 @@ incorporating the patch for 2.1 from chrisy at [https://bugs.launchpad.net/redmi
 
 ### Incompatibilities
 
-As reported in issue [Issue # 12](https://github.com/ncoders/redmine_local_avatars/issues/12), the plugin "mega_calendar" ist not compatible with this plugin due to an issue with the provided users_controller_path.rb file.
+As reported in [issue #12](https://github.com/ncoders/redmine_local_avatars/issues/12), the plugin "mega_calendar" ist not compatible with this plugin due to an issue with the provided users_controller_path.rb file.
 
 ### Old version on launchpad
 Tested on Redmine trunk r4388	(version 1.0.3).  Should be compatible with
