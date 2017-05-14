@@ -33,12 +33,15 @@ module LocalAvatarsPlugin
 					image_url = url_for :only_path => true, :controller => 'account', :action => 'get_avatar', :id => user
 					options[:size] = "64" unless options[:size]
 					return "<img class=\"gravatar\" width=\"#{options[:size]}\" height=\"#{options[:size]}\" src=\"#{image_url}\" />".html_safe
-				else
-					options[:size] = "64" unless options[:size]
-					return image_tag('default.png', options.merge({:plugin => 'redmine_local_avatars', :class => 'gravatar'}))
 				end
 			end
-			avatar_without_local(user, options)
+			avtr = avatar_without_local(user, options)
+			if avtr.present?
+				return avtr
+			else
+				options[:size] = "64" unless options[:size]
+			  return image_tag('default.png', options.merge({:plugin => 'redmine_local_avatars', :class => 'gravatar'}))
+			end
 		end
   end
 end
