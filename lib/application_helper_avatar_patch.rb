@@ -39,8 +39,13 @@ module LocalAvatarsPlugin
 			if avtr.present?
 				return avtr
 			else
-				options[:size] = "64" unless options[:size]
-			  return image_tag('default.png', options.merge({:plugin => 'redmine_local_avatars', :class => 'gravatar'}))
+				# Convert type because :size is passed as not string but integer
+				# in method html_subject_content (lib/redmine/helpers/gantt.rb).
+				if options[:size] && options[:size].is_a?(Integer)
+					options[:size] = options[:size].to_s
+				end
+
+				return image_tag('default.png', options.merge({:plugin => 'redmine_local_avatars', :class => 'gravatar'}))
 			end
 		end
   end
