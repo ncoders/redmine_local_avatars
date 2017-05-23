@@ -26,7 +26,13 @@ module LocalAvatarsPlugin
       end
     end
 
-		def avatar_with_local(user, options = { })
+		def avatar_with_local(user = nil, options = { })
+			
+			if user.nil? 
+			  user = User.current
+			  @user = user
+			end 
+
 			# Convert type because :size is passed as not string but integer
 			# in method html_subject_content (lib/redmine/helpers/gantt.rb).
 			if options[:size] && options[:size].is_a?(Integer)
@@ -37,7 +43,7 @@ module LocalAvatarsPlugin
 				av = user.attachments.find_by_description 'avatar'
 				if av then
 					image_url = url_for :only_path => true, :controller => 'account', :action => 'get_avatar', :id => user
-					return image_tag(image_url, options.reverse_merge(:class => 'gravatar'))
+					return ActionController::Base.helpers.image_tag(image_url, options.reverse_merge(:class => 'gravatar'))
 				end
 			end
 
@@ -46,7 +52,7 @@ module LocalAvatarsPlugin
 			if avtr.present?
 				return avtr
 			else
-				return image_tag('default.png', options.reverse_merge(:plugin => 'redmine_local_avatars', :class => 'gravatar'))
+				return ActionController::Base.helpers.image_tag('default.png', options.reverse_merge(:plugin => 'redmine_local_avatars', :class => 'gravatar'))
 			end
 		end
   end
