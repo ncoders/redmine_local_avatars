@@ -22,7 +22,8 @@ module LocalAvatarsPlugin
   module ApplicationAvatarPatch
     def self.included(base) # :nodoc:    
       base.class_eval do
-  			alias_method_chain :avatar, :local
+        alias_method :avatar_without_local, :avatar
+        alias_method :avatar, :avatar_with_local
       end
     end
 
