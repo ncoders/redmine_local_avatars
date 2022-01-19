@@ -33,7 +33,8 @@ module LocalAvatarsPlugin
 				if av then
 					image_url = url_for :only_path => true, :controller => 'account', :action => 'get_avatar', :id => user
 					options[:size] = "64" unless options[:size]
-					return "<img class=\"gravatar\" width=\"#{options[:size]}\" height=\"#{options[:size]}\" src=\"#{image_url}\" />".html_safe
+					title = "#{user.name}"
+					return "<img class=\"gravatar\" title=\"#{title}\" width=\"#{options[:size]}\" height=\"#{options[:size]}\" src=\"#{image_url}\" />".html_safe
 				end
 			end
 			avatar_without_local(user, options)
