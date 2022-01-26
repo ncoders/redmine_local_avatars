@@ -19,10 +19,15 @@
 module LocalAvatarsPlugin
 	module LocalAvatars
 		def send_avatar(user)
-			av = user.attachments.find_by_description 'avatar'
-			send_file(av.diskfile, :filename => filename_for_content_disposition(av.filename),
-			                       :type => av.content_type, 
-			                       :disposition => (av.image? ? 'inline' : 'attachment')) if av 
+			if User.current.login.length > 0 then
+                		av = user.attachments.find_by_description 'avatar'
+                		send_file(av.diskfile, :filename => filename_for_content_disposition(av.filename),
+							:type => av.content_type,
+							:disposition => (av.image? ? 'inline' : 'attachment')) if av
+				response.headers['Cache-Control'] = 'public, max-age=86400';
+			else
+				response.headers['X-Status-Reason'] = 'no login'
+		    	end
 		end
 
 		# expects @user to be set.
