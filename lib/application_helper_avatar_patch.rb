@@ -16,10 +16,9 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
-require 'local_avatars'
 
-module LocalAvatarsPlugin
-  module ApplicationAvatarPatch
+  module ApplicationHelperAvatarPatch
+
     def self.included(base) # :nodoc:    
       base.class_eval do
         alias_method :avatar_without_local, :avatar
@@ -27,7 +26,9 @@ module LocalAvatarsPlugin
       end
     end
 
+
 		def avatar_with_local(user, options = { })
+			puts '--------'
 			if user.is_a?(User)then
 				av = user.attachments.find_by_description 'avatar'
 				if av then
@@ -39,5 +40,8 @@ module LocalAvatarsPlugin
 			end
 			avatar_without_local(user, options)
 		end
+
+
   end
-end
+
+AvatarsHelper.include(ApplicationHelperAvatarPatch)
