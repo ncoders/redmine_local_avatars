@@ -23,34 +23,21 @@ Redmine::Plugin.register :redmine_local_avatars do
   author 'Andrew Chaika and Luca Pireddu'
   author_url 'https://github.com/ncoders/redmine_local_avatars'
   description 'This plugin lets users upload avatars directly into Redmine'
-  version '1.0.6'
+  version '1.0.7'
+  requires_redmine version_or_higher: '4.1'
 end
 
 receiver = Object.const_defined?('ActiveSupport::Reloader') ?  ActiveSupport::Reloader : ActionDispatch::Callbacks
-receiver.to_prepare  do
-  require_dependency 'project'
-  require_dependency 'principal'
-  require_dependency 'user'
 
-  helper_klass = ApplicationHelper.method_defined?(:avatar) ? ApplicationHelper : AvatarsHelper
-
-  AccountController.send(:include,  LocalAvatarsPlugin::AccountControllerPatch)
-  helper_klass.send(:include,  LocalAvatarsPlugin::ApplicationAvatarPatch)
-  MyController.send(:include,  LocalAvatarsPlugin::MyControllerPatch)
-  User.send(:include,  LocalAvatarsPlugin::UsersAvatarPatch)
-  UsersController.send(:include,  LocalAvatarsPlugin::UsersControllerPatch)
-  UsersHelper.send(:include,  LocalAvatarsPlugin::UsersHelperPatch)
-end
-
-require 'local_avatars'
+require File.expand_path('../lib/local_avatars', __FILE__)
 
 # patches to Redmine
-require "account_controller_patch.rb"
-require "application_helper_avatar_patch.rb"
-require "my_controller_patch.rb"
-require "users_avatar_patch.rb"   # User model
-require "users_controller_patch.rb"
-require "users_helper_avatar_patch.rb"  # UsersHelper
+require File.expand_path('../lib/account_controller_patch', __FILE__)
+require File.expand_path('../lib/application_helper_avatar_patch', __FILE__)
+require File.expand_path('../lib/my_controller_patch', __FILE__)
+require File.expand_path('../lib/users_avatar_patch', __FILE__)    # User model
+require File.expand_path('../lib/users_controller_patch', __FILE__)
+require File.expand_path('../lib/users_helper_avatar_patch', __FILE__)    # UsersHelper
 
 # hooks
-require 'redmine_local_avatars/hooks'
+require File.expand_path('../lib/redmine_local_avatars/hooks', __FILE__) 

@@ -16,10 +16,10 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
-require 'local_avatars'
 
-module LocalAvatarsPlugin
-  module UsersHelperPatch
+
+
+  module UsersHelperAvatarPatch
     def self.included(base) # :nodoc:    
       base.class_eval do      
         alias_method :user_settings_tabs_without_avatar, :user_settings_tabs
@@ -32,5 +32,6 @@ module LocalAvatarsPlugin
 			tabs << {:name => 'avatar', :partial => 'my/avatar', :label => :label_avatar}
 		end
   end
-end
 
+
+UsersHelper.include(UsersHelperAvatarPatch)

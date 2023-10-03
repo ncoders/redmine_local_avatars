@@ -16,9 +16,8 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA	 02110-1301, USA.
 
-require 'local_avatars'
+require File.expand_path('../local_avatars', __FILE__)
 
-module LocalAvatarsPlugin
 	module MyControllerPatch
 		def self.included(base) # :nodoc:		 
 			base.class_eval do			
@@ -45,5 +44,6 @@ module LocalAvatarsPlugin
 			end
 		end
 	end
-end
 
+
+MyController.include(MyControllerPatch)

@@ -16,10 +16,9 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
-require 'local_avatars'
 
-module LocalAvatarsPlugin
-  module ApplicationAvatarPatch
+  module ApplicationHelperAvatarPatch
+
     def self.included(base) # :nodoc:    
       base.class_eval do
         alias_method :avatar_without_local, :avatar
@@ -27,17 +26,21 @@ module LocalAvatarsPlugin
       end
     end
 
+
 		def avatar_with_local(user, options = { })
 			if user.is_a?(User)then
 				av = user.attachments.find_by_description 'avatar'
 				if av then
 					image_url = url_for :only_path => true, :controller => 'account', :action => 'get_avatar', :id => user
-					options[:size] = "64" unless options[:size]
+					options[:size] = "24" unless options[:size]
 					title = "#{user.name}"
 					return "<img class=\"gravatar\" title=\"#{title}\" width=\"#{options[:size]}\" height=\"#{options[:size]}\" src=\"#{image_url}\" />".html_safe
 				end
 			end
 			avatar_without_local(user, options)
 		end
+
+
   end
-end
+
+AvatarsHelper.include(ApplicationHelperAvatarPatch)

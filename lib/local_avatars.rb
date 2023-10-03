@@ -16,7 +16,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
-module LocalAvatarsPlugin
+
 	module LocalAvatars
 		def send_avatar(user)
 			av = user.attachments.find_by_description 'avatar'
@@ -49,4 +49,4 @@ module LocalAvatarsPlugin
 			end
 		end
 	end
-end
+
