@@ -1,0 +1,34 @@
+# this docker compose is for quickly testing this plugin in a throwaway redmine service
+
+services:
+  db:
+    image: mariadb:11.4
+    environment:
+      MYSQL_ROOT_PASSWORD: redmine_root_pwd
+      MYSQL_DATABASE: redmine
+      MYSQL_USER: redmine
+      MYSQL_PASSWORD: redmine_password
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    # No host volume mapping for throwaway usage
+
+  redmine:
+    image: redmine:6.1
+    ports:
+      - "80:3000"
+    environment:
+      REDMINE_DB_MYSQL: db
+      REDMINE_DB_USERNAME: redmine
+      REDMINE_DB_PASSWORD: redmine_password
+      REDMINE_DB_DATABASE: redmine
+    volumes:
+      # mount this repo inside the plugin directory
+      - .:/usr/src/redmine/plugins/redmine_local_avatars
+      # No host volume mapping for throwaway usage
+    depends_on:
+      db:
+        condition: service_healthy

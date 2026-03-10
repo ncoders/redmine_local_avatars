@@ -19,6 +19,13 @@ rake redmine:plugins:migrate RAILS_ENV=production
 
 And restart your application server.
 
+## Test this in Docker
+
+This repository contains a `docker-compose.yml` with a clean install throwaway redmine instance to quickly test or evaluate this plugin. 
+```
+docker compose up
+```
+
 
 ## Authors
 
