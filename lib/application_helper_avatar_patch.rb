@@ -31,7 +31,7 @@
 			if user.is_a?(User)then
 				av = user.attachments.find_by_description 'avatar'
 				if av then
-					image_url = url_for :only_path => true, :controller => '/account', :action => 'get_avatar', :id => user
+					image_url = local_avatar_path(user)
 					options[:size] = "24" unless options[:size]
 					title = "#{user.name}"
 					return "<img class=\"gravatar\" title=\"#{title}\" width=\"#{options[:size]}\" height=\"#{options[:size]}\" src=\"#{image_url}\" />".html_safe
