@@ -20,7 +20,8 @@ require 'redmine'
 
 Redmine::Plugin.register :redmine_local_avatars do
   name 'Redmine Local Avatars plugin'
-  author 'Andrew Chaika and Luca Pireddu'
+  author 'Andrew Chaika, Luca Pireddu and dup2'
+  url 'https://github.com/ncoders/redmine_local_avatars'
   author_url 'https://github.com/ncoders/redmine_local_avatars'
   description 'This plugin lets users upload avatars directly into Redmine'
   version '1.1.1'
