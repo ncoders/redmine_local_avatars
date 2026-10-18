@@ -20,6 +20,13 @@ rake redmine:plugins:migrate RAILS_ENV=production
 And restart your application server.
 
 
+## Compatibility
+
+Tested and working with Redmine 6.1. Note: avatar rendering in OAuth
+(Doorkeeper) pages required a routing fix (see PR #34), which is included
+as of version 1.1.0.
+
+
 ## Authors
 
 * A.Chaika wrote the original version:
